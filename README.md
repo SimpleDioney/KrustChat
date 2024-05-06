@@ -81,7 +81,9 @@ Contribuições para o aplicativo ChatZap são bem-vindas!
 
 5. **Abra um Pull Request**
 
-Para mais informações sobre como contribuir, por favor consulte o documento `CONTRIBUTING.md`.
+## Apoio
+Para apoiar o desenvolvimento contínuo e melhorias, considere tornar-se um patrocinador no Patreon:</p>
+<a href="https://patreon.com/SimpleDioney"><img src="https://patreon.com/SimpleDioney?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink" alt="Apoie no Patreon">
 
 ## Licença
 
