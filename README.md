@@ -23,8 +23,8 @@ O KrustChat é uma aplicação de chat em tempo real que utiliza WebSockets para
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/seuusername/chatzap.git
-   cd chatzap
+   git clone https://github.com/SimpleDioney/KrustChat.git
+   cd KrustChat
    ```
 
 2. **Instale as dependências:**
