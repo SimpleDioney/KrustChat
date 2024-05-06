@@ -1,7 +1,8 @@
+
+<div align="center">
 <h1>KrustChat</h1>
-
-<p>O KrustChat é uma aplicação de chat em tempo real que utiliza WebSockets para permitir comunicação instantânea, além de suportar o envio de mensagens de texto, uploads de arquivos e compartilhamento de imagens com legendas.</p>
-
+<p>O <strong>KrustChat</strong> é uma aplicação de chat em tempo real que utiliza WebSockets para permitir comunicação instantânea, além de suportar o envio de mensagens de texto, uploads de arquivos e compartilhamento de imagens com legendas.</p>
+</div>
 <h2>Funcionalidades</h2>
 <ul>
   <li><strong>Mensagens em Tempo Real</strong>: Os usuários podem enviar e receber mensagens instantaneamente.</li>
@@ -40,7 +41,17 @@
 <p>Entre no chat, envie mensagens, arquivos, e veja tudo em tempo real.</p>
 
 <h2>Contribuições</h2>
-<p>Contribuições para o aplicativo KrustChat são bem-vindas!</p>
+<p>Contribuições para melhorar KrustChat são sempre bem-vindas! Para contribuir:</p>
+<ol text-align="justify">
+    <li>Faça um fork do repositório.</li>
+    <li>Crie um novo branch para sua feature ou correção.</li>
+    <li>Desenvolva e teste suas mudanças.</li>
+    <li>Envie um pull request.</li>
+</ol>
+
+<h2>Apoio</h2>
+<p>Para apoiar o desenvolvimento contínuo e melhorias, considere tornar-se um patrocinador no Patreon:</p>
+<p><a href="https://patreon.com/SimpleDioney"><img src="https://patreon.com/SimpleDioney?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink" alt="Apoie no Patreon"></a></p>
 
 <h2>Licença</h2>
 <p>Este projeto está licenciado sob a Licença MIT - veja o arquivo <a href="LICENSE">LICENSE</a> para detalhes.</p>
