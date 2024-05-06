@@ -26,9 +26,9 @@ O KrustChat é uma aplicação de chat em tempo real que utiliza WebSockets para
    git clone https://github.com/SimpleDioney/KrustChat.git
    cd KrustChat
 
-   Ou utilize nosso sistema que facilita clonagem de repositorios e afins:
+   Ou utilize nosso sistema GitBrowse que facilita clonagem de repositorios e afins:
 
-   [GitBrowse](https://github.com/SimpleDioney/GitBrowse)
+   https://github.com/SimpleDioney/GitBrowse
    ```
 
 2. **Instale as dependências:**
