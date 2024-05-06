@@ -57,7 +57,7 @@ O KrustChat é uma aplicação de chat em tempo real que utiliza WebSockets para
 
 ## Contribuições
 
-Contribuições para o aplicativo ChatZap são bem-vindas!
+Contribuições para o aplicativo KrustChat são bem-vindas!
 
 1. **Faça um Fork do repositório**: Clique em 'Fork' no canto superior direito da página do repositório.
 
