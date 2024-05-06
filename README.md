@@ -87,4 +87,4 @@ Para apoiar o desenvolvimento contínuo e melhorias, considere tornar-se um patr
 
 ## Licença
 
-Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE.md](LICENSE) para detalhes.
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
