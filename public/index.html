@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WebSocket Chat</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/perfect-scrollbar/css/perfect-scrollbar.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <div class="chat">
+      <div id="messages" class="ps"></div>
+      <div id="nameInputArea">
+        <input type="text" id="name" placeholder="Seu nome aqui..." required />
+        <button id="setName">Entrar</button>
+      </div>
+      <div id="sendArea">
+        <textarea
+          id="message"
+          placeholder="Digite uma mensagem..."
+          disabled
+        ></textarea>
+        <input type="file" id="fileInput" style="display: none" disabled />
+        <button
+          id="uploadButton"
+          disabled
+          onclick="document.getElementById('fileInput').click();"
+        >
+          +
+        </button>
+        <button id="sendButton" disabled>Enviar</button>
+      </div>
+    </div>
+
+    <!-- Overlay para modal -->
+    <div class="overlay"></div>
+
+    <div class="modal" id="imageModal">
+      <img src="" id="previewImage" style="width: 90%; margin: 10px" />
+      <input
+        type="text"
+        id="imageCaption"
+        placeholder="Adicione uma legenda..."
+        style="width: 90%"
+      />
+      <button id="sendImageButton">Enviar Imagem</button>
+      <button id="cancelImageButton">Cancelar</button>
+    </div>
+
+    <div class="modal" id="fileModal">
+      <p id="fileName"></p>
+      <button id="sendFileButton">Enviar Arquivo</button>
+      <button id="cancelFileButton">Cancelar</button>
+    </div>
+
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
