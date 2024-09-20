@@ -7,15 +7,17 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const server = app.listen(PORT, () => console.log(`Listening on ${PORT}`));
-const wss = new WebSocket.Server({ server });
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, 'public/uploads/');
+        const uploadsDir = path.join(process.cwd(), 'public', 'uploads');
+        if (!fs.existsSync(uploadsDir)){
+            fs.mkdirSync(uploadsDir, { recursive: true });
+        }
+        cb(null, uploadsDir);
     },
     filename: function (req, file, cb) {
-        const safeName = file.originalname.replace(/[^a-zA-Z0-9.]/g, '_'); // Substitui caracteres especiais por sublinhados
+        const safeName = file.originalname.replace(/[^a-zA-Z0-9.]/g, '_');
         cb(null, safeName);
     }
 });
@@ -25,18 +27,36 @@ const upload = multer({ storage: storage });
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-let messages = JSON.parse(fs.readFileSync('messages.json', 'utf8'));
+let messages = [];
+
+// Função para carregar mensagens de um arquivo
+const loadMessages = () => {
+    try {
+        messages = JSON.parse(fs.readFileSync('messages.json', 'utf8'));
+    } catch (err) {
+        messages = [];
+    }
+};
+
+// Inicializa mensagens
+loadMessages();
 
 function broadcast(data) {
     wss.clients.forEach(client => {
         if (client.readyState === WebSocket.OPEN) {
-            client.send(JSON.stringify([data])); // Envia mensagem como array
+            client.send(JSON.stringify([data]));
         }
     });
 }
 
+const server = app.listen(PORT, () => {
+    console.log(`Listening on ${PORT}`);
+});
+
+const wss = new WebSocket.Server({ server });
+
 wss.on('connection', (ws) => {
-    ws.send(JSON.stringify(messages)); // Envia mensagens existentes ao conectar
+    ws.send(JSON.stringify(messages));
 
     ws.on('message', (message) => {
         const data = JSON.parse(message);
@@ -55,6 +75,8 @@ app.post('/upload', upload.single('file'), (req, res) => {
 
     messages.push(message);
     fs.writeFileSync('messages.json', JSON.stringify(messages, null, 2));
-    broadcast(message); // Atualiza todos os clientes
+    broadcast(message);
     res.json({ filePath: `/uploads/${file.filename}` });
 });
+
+module.exports = app; // Exporta o app para Vercel
